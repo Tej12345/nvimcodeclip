@@ -16,7 +16,7 @@ vnoremap <silent> <Plug>(nclipper-with-filename) :<C-u>call <SID>nclipper(1)<Cr>
 if (!exists('g:nclipper_nomap') || !g:nclipper_nomap)
 \   && !hasmapto('<Plug>(nclipper)', 'v', 0)
   silent! vmap <unique> <C-y> <Plug>(nclipper)
-  silent! vmap <unique> <M-y> <Plug>(nclipper-with-filename)
+  silent! vmap <unique> v <Plug>(nclipper-with-filename)
 endif
 
 if !exists('g:nclipper_format')

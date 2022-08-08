@@ -8,6 +8,7 @@ function! s:nclipper(with_filename)
   let value = (a:with_filename ? @% . ":" . "\n" : '') .
         \ join(map(getline(begin, end), g:nclipper_format), "\n")
   call setreg('+', value, "V")
+  :OSCYankReg + <CR>
 
 endfunction
 
